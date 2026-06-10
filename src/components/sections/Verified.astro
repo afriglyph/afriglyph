@@ -1,6 +1,7 @@
 ---
 import IconArrow from '../IconArrow.astro';
 import IconCheck from '../IconCheck.astro';
+import { withBase } from '../../utils/base';
 ---
 
 <section class="verified" id="verified">
@@ -27,7 +28,7 @@ import IconCheck from '../IconCheck.astro';
           Display of the Verified mark is a contractual requirement of every Platform Partner Agreement. It cannot be removed, hidden, or restyled outside specification. The visibility of the artist is what makes the cultural authenticity structurally real — not a marketing claim.
         </p>
 
-        <a href="/creator-attribution" class="verified-cta">
+        <a href={withBase('/creator-attribution')} class="verified-cta">
           See an example attribution page
           <IconArrow />
         </a>
@@ -45,7 +46,7 @@ import IconCheck from '../IconCheck.astro';
             <div class="verified-phone-title">Transfer Successful</div>
             <div class="verified-phone-sub">₦25,000 sent to Mum</div>
 
-            <a href="/creator-attribution" class="verified-mark">
+            <a href={withBase('/creator-attribution')} class="verified-mark">
               <div class="verified-mark-dot">
                 <IconCheck size={6} stroke="#111110" />
               </div>

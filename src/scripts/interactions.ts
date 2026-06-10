@@ -1,5 +1,11 @@
 export function initInteractions() {
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const basePath = new URL(import.meta.env.BASE_URL, window.location.origin).pathname.replace(/\/$/, '') || '/';
+
+  function isHomePath(pathname: string): boolean {
+    const current = pathname.replace(/\/$/, '') || '/';
+    return current === basePath || current === '/';
+  }
 
   document.querySelectorAll('.fade-up').forEach((el) => {
     if (prefersReducedMotion) {
@@ -22,20 +28,19 @@ export function initInteractions() {
     document.querySelectorAll('.fade-up').forEach((el) => observer.observe(el));
   }
 
-  const onHome =
-    window.location.pathname === '/' ||
-    window.location.pathname === '' ||
-    window.location.pathname.endsWith('/index.html');
+  const onHome = isHomePath(window.location.pathname);
 
-  document.querySelectorAll('a[href^="#"], a[href^="/#"]').forEach((anchor) => {
+  document.querySelectorAll('a[href*="#"]').forEach((anchor) => {
     anchor.addEventListener('click', (e) => {
       const href = anchor.getAttribute('href');
-      if (!href || href === '#') return;
+      if (!href || !href.includes('#')) return;
 
-      const isRootHash = href.startsWith('/#');
-      const hash = isRootHash ? href.slice(1) : href;
+      const hashIndex = href.indexOf('#');
+      const hash = href.slice(hashIndex);
+      const pathPart = href.slice(0, hashIndex).replace(/\/$/, '') || '/';
+      const isHomeHash = pathPart === basePath || pathPart === '/';
 
-      if (isRootHash && !onHome) return;
+      if (isHomeHash && !onHome) return;
 
       const target = document.querySelector(hash);
       if (target) {
@@ -84,11 +89,20 @@ export function initInteractions() {
     if (e.key === 'Escape') closeMobileMenu();
   });
 
+  const withBase = (path: string) => {
+    const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
+    if (path.startsWith('/#')) {
+      return `${base.replace(/\/$/, '')}${path.slice(1)}`;
+    }
+    const normalized = path.startsWith('/') ? path.slice(1) : path;
+    return `${base}${normalized}`;
+  };
+
   const glyphImgs = [
-    '/images/glyphs/glyph-hero.jpg',
-    '/images/glyphs/glyph-tray-3.jpg',
-    '/images/glyphs/glyph-tray-2.jpg',
-    '/images/glyphs/glyph-tray-1.jpg',
+    withBase('/images/glyphs/glyph-hero.jpg'),
+    withBase('/images/glyphs/glyph-tray-3.jpg'),
+    withBase('/images/glyphs/glyph-tray-2.jpg'),
+    withBase('/images/glyphs/glyph-tray-1.jpg'),
   ];
 
   if (!prefersReducedMotion) {

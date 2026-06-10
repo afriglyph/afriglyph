@@ -1,3 +1,7 @@
+---
+import { withBase } from '../../utils/base';
+---
+
 <section class="library" id="library">
   <div class="container">
     <div class="library-header fade-up">
@@ -37,7 +41,7 @@
       <div class="glyph-card fade-up delay-4">
         <div class="glyph-display" style="min-height:130px;padding:0;overflow:hidden;">
           <img
-            src="/images/glyphs/glyph-discipline.jpg"
+            src={withBase('/images/glyphs/glyph-discipline.jpg')}
             alt="Discipline Win Glyph"
             class="glyph-img"
             width="200"

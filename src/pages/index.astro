@@ -9,6 +9,7 @@ import InApp from '../components/sections/InApp.astro';
 import Library from '../components/sections/Library.astro';
 import Verified from '../components/sections/Verified.astro';
 import Pilot from '../components/sections/Pilot.astro';
+import { withBase } from '../utils/base';
 
 const siteUrl = Astro.site?.toString().replace(/\/$/, '') || 'https://afriglyph.com';
 
@@ -18,7 +19,7 @@ const jsonLd = [
     '@type': 'Organization',
     name: 'AfriGlyph Inc.',
     url: siteUrl,
-    logo: `${siteUrl}/images/logo.jpg`,
+    logo: new URL(withBase('/images/logo.jpg'), `${siteUrl}/`).toString(),
     description: 'Cultural infrastructure for the African internet — premium Glyphs for African fintech apps.',
     address: {
       '@type': 'PostalAddress',

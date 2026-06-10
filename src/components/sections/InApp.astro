@@ -1,3 +1,7 @@
+---
+import { withBase } from '../../utils/base';
+---
+
 <section class="in-app" id="inapp">
   <div class="container">
     <div class="eyebrow fade-up">In the App</div>
@@ -14,7 +18,7 @@
           <div class="phone-sub">To Mum · First Bank</div>
           <div class="glyph-zone">
             <img
-              src="/images/glyphs/glyph-hero.jpg"
+              src={withBase('/images/glyphs/glyph-hero.jpg')}
               alt="Cultural celebration Glyph"
               class="glyph-img"
               width="120"
@@ -24,13 +28,13 @@
           </div>
           <div class="tray-peek" aria-hidden="true">
             <div class="tray-thumb">
-              <img src="/images/glyphs/glyph-tray-1.jpg" alt="" class="glyph-img" width="28" height="28" loading="lazy" />
+              <img src={withBase('/images/glyphs/glyph-tray-1.jpg')} alt="" class="glyph-img" width="28" height="28" loading="lazy" />
             </div>
             <div class="tray-thumb">
-              <img src="/images/glyphs/glyph-tray-2.jpg" alt="" class="glyph-img" width="28" height="28" loading="lazy" />
+              <img src={withBase('/images/glyphs/glyph-tray-2.jpg')} alt="" class="glyph-img" width="28" height="28" loading="lazy" />
             </div>
             <div class="tray-thumb">
-              <img src="/images/glyphs/glyph-tray-3.jpg" alt="" class="glyph-img" width="28" height="28" loading="lazy" />
+              <img src={withBase('/images/glyphs/glyph-tray-3.jpg')} alt="" class="glyph-img" width="28" height="28" loading="lazy" />
             </div>
             <div class="tray-more">more ›</div>
           </div>

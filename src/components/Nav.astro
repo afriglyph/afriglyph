@@ -1,16 +1,18 @@
 ---
+import { withBase } from '../utils/base';
+
 const links = [
-  { href: '/#how', label: 'How it works' },
-  { href: '/#library', label: 'The library' },
-  { href: '/#verified', label: 'Verified' },
-  { href: '/#pilot', label: 'Pilot' },
+  { href: withBase('/#how'), label: 'How it works' },
+  { href: withBase('/#library'), label: 'The library' },
+  { href: withBase('/#verified'), label: 'Verified' },
+  { href: withBase('/#pilot'), label: 'Pilot' },
 ];
 ---
 
 <header class="site-header">
-  <a href="/" class="nav-logo" aria-label="AfriGlyph home">
+  <a href={withBase('/')} class="nav-logo" aria-label="AfriGlyph home">
     <img
-      src="/images/logo.jpg"
+      src={withBase('/images/logo.jpg')}
       alt="AfriGlyph"
       width="44"
       height="44"

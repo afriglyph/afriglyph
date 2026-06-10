@@ -2,6 +2,7 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Nav from '../components/Nav.astro';
 import Footer from '../components/Footer.astro';
+import { withBase } from '../utils/base';
 
 const title = 'Privacy Policy — AfriGlyph';
 const description = 'AfriGlyph privacy policy. Contact pilot@afriglyph.com for privacy inquiries.';
@@ -34,7 +35,7 @@ const description = 'AfriGlyph privacy policy. Contact pilot@afriglyph.com for p
         </section>
       </div>
 
-      <a href="/" class="btn-secondary" style="margin-top:2.5rem;">
+      <a href={withBase('/')} class="btn-secondary" style="margin-top:2.5rem;">
         ← Back to AfriGlyph
       </a>
     </div>

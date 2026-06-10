@@ -3,6 +3,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import Nav from '../components/Nav.astro';
 import Footer from '../components/Footer.astro';
 import IconCheck from '../components/IconCheck.astro';
+import { withBase } from '../utils/base';
 
 const title = 'Artist Attribution — AfriGlyph';
 const description = 'Example creator attribution page for AfriGlyph verified Glyphs. Every Glyph is signed work from a commissioned African digital artist.';
@@ -46,7 +47,7 @@ const description = 'Example creator attribution page for AfriGlyph verified Gly
         Example attribution page — content forthcoming.
       </p>
 
-      <a href="/" class="btn-secondary" style="margin-top:0;">
+      <a href={withBase('/')} class="btn-secondary" style="margin-top:0;">
         ← Back to AfriGlyph
       </a>
     </div>

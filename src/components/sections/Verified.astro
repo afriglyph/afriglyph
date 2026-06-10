@@ -1,0 +1,67 @@
+---
+import IconArrow from '../IconArrow.astro';
+import IconCheck from '../IconCheck.astro';
+---
+
+<section class="verified" id="verified">
+  <div class="verified-bg" aria-hidden="true"></div>
+  <div class="container verified-inner">
+    <div class="verified-grid">
+      <div class="fade-up">
+        <div class="verified-badge">
+          <div class="verified-badge-dot">
+            <IconCheck />
+          </div>
+          <span class="verified-badge-text">Verified by AfriGlyph</span>
+        </div>
+
+        <h2>
+          Every Glyph is <em>signed work</em>.<br>Tap to see who made it.
+        </h2>
+
+        <p class="verified-lead">
+          The "Verified by AfriGlyph" mark appears alongside every Glyph deployed inside a partner app. Tap it, and you arrive on the page of the African artist who made it — with their name, region, statement, and a real-time record of how they are being paid every time their work is seen.
+        </p>
+
+        <p class="verified-body">
+          Display of the Verified mark is a contractual requirement of every Platform Partner Agreement. It cannot be removed, hidden, or restyled outside specification. The visibility of the artist is what makes the cultural authenticity structurally real — not a marketing claim.
+        </p>
+
+        <a href="/creator-attribution" class="verified-cta">
+          See an example attribution page
+          <IconArrow />
+        </a>
+      </div>
+
+      <div class="fade-up delay-2 verified-phone-wrap">
+        <div class="verified-phone">
+          <div class="verified-phone-header">
+            <span>9:41</span>
+            <span>Partner App</span>
+          </div>
+
+          <div class="verified-phone-content">
+            <div class="verified-phone-emoji" aria-hidden="true">🎊</div>
+            <div class="verified-phone-title">Transfer Successful</div>
+            <div class="verified-phone-sub">₦25,000 sent to Mum</div>
+
+            <a href="/creator-attribution" class="verified-mark">
+              <div class="verified-mark-dot">
+                <IconCheck size={6} stroke="#111110" />
+              </div>
+              <span class="verified-mark-text">Verified by AfriGlyph</span>
+            </a>
+
+            <div class="verified-tap-hint">Tap to see the artist</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="verified-quote fade-up delay-3">
+      <p>
+        "Designed by Apple in California" on the back of every iPhone. <span>"Verified by AfriGlyph" alongside every Glyph that crosses the African internet.</span>
+      </p>
+    </div>
+  </div>
+</section>

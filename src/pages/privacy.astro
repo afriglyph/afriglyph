@@ -1,0 +1,43 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+
+const title = 'Privacy Policy — AfriGlyph';
+const description = 'AfriGlyph privacy policy. Contact pilot@afriglyph.com for privacy inquiries.';
+---
+
+<BaseLayout title={title} description={description}>
+  <Nav />
+  <main id="main" class="page-shell">
+    <div class="container-narrow">
+      <div class="eyebrow">Legal</div>
+      <h1>Privacy Policy</h1>
+      <p style="font-size:0.85rem;color:var(--muted);margin-bottom:2rem;">Last updated: June 10, 2026</p>
+
+      <div style="display:flex;flex-direction:column;gap:2rem;">
+        <section>
+          <h2 style="font-size:1.4rem;margin-bottom:0.75rem;">Information We Collect</h2>
+          <p style="color:var(--muted);">Privacy policy is being finalized. AfriGlyph's API receives only region and transaction context — no user identifiers, no financial data, no PII.</p>
+        </section>
+
+        <section>
+          <h2 style="font-size:1.4rem;margin-bottom:0.75rem;">How We Use Information</h2>
+          <p style="color:var(--muted);">Full policy details will be published here. Contact us for questions about data handling practices.</p>
+        </section>
+
+        <section>
+          <h2 style="font-size:1.4rem;margin-bottom:0.75rem;">Contact</h2>
+          <p style="color:var(--muted);">
+            For privacy inquiries, contact <a href="mailto:pilot@afriglyph.com" style="color:var(--gold);">pilot@afriglyph.com</a>.
+          </p>
+        </section>
+      </div>
+
+      <a href="/" class="btn-secondary" style="margin-top:2.5rem;">
+        ← Back to AfriGlyph
+      </a>
+    </div>
+  </main>
+  <Footer />
+</BaseLayout>

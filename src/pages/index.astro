@@ -1,0 +1,73 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+import Hero from '../components/sections/Hero.astro';
+import Problem from '../components/sections/Problem.astro';
+import How from '../components/sections/How.astro';
+import InApp from '../components/sections/InApp.astro';
+import Library from '../components/sections/Library.astro';
+import Verified from '../components/sections/Verified.astro';
+import Pilot from '../components/sections/Pilot.astro';
+
+const siteUrl = Astro.site?.toString().replace(/\/$/, '') || 'https://afriglyph.com';
+
+const jsonLd = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: 'AfriGlyph Inc.',
+    url: siteUrl,
+    logo: `${siteUrl}/images/logo.jpg`,
+    description: 'Cultural infrastructure for the African internet — premium Glyphs for African fintech apps.',
+    address: {
+      '@type': 'PostalAddress',
+      addressRegion: 'Delaware',
+      addressCountry: 'US',
+    },
+    contactPoint: {
+      '@type': 'ContactPoint',
+      email: 'pilot@afriglyph.com',
+      contactType: 'sales',
+    },
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'SoftwareApplication',
+    name: 'AfriGlyph API',
+    applicationCategory: 'BusinessApplication',
+    operatingSystem: 'Any',
+    description: 'API for culturally specific celebration moments in African fintech payment success screens.',
+    offers: {
+      '@type': 'Offer',
+      price: '1000',
+      priceCurrency: 'USD',
+      description: '30-day pilot with integration support',
+    },
+    provider: {
+      '@type': 'Organization',
+      name: 'AfriGlyph Inc.',
+    },
+  },
+];
+---
+
+<BaseLayout jsonLd={jsonLd}>
+  <Nav />
+  <main id="main">
+    <Hero />
+    <div class="divider"></div>
+    <Problem />
+    <div class="divider"></div>
+    <How />
+    <div class="divider"></div>
+    <InApp />
+    <div class="divider"></div>
+    <Library />
+    <div class="divider"></div>
+    <Verified />
+    <div class="divider"></div>
+    <Pilot />
+  </main>
+  <Footer />
+</BaseLayout>

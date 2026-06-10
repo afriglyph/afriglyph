@@ -1,0 +1,55 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+import IconCheck from '../components/IconCheck.astro';
+
+const title = 'Artist Attribution — AfriGlyph';
+const description = 'Example creator attribution page for AfriGlyph verified Glyphs. Every Glyph is signed work from a commissioned African digital artist.';
+---
+
+<BaseLayout title={title} description={description}>
+  <Nav />
+  <main id="main" class="page-shell">
+    <div class="container-narrow">
+      <div class="eyebrow">Example Attribution</div>
+      <h1>Omo! Big Win</h1>
+
+      <div class="verified-badge" style="margin-bottom:2rem;">
+        <div class="verified-badge-dot">
+          <IconCheck />
+        </div>
+        <span class="verified-badge-text">Verified by AfriGlyph</span>
+      </div>
+
+      <p class="verified-lead" style="max-width:none;">
+        This is an example attribution page. When a user taps the Verified mark inside a partner app, they arrive here — on the page of the African artist who made the Glyph.
+      </p>
+
+      <div style="margin:2.5rem 0;padding:2rem;border:1px solid var(--border);border-radius:10px;background:var(--dark-3);">
+        <p style="font-size:0.8rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:0.5rem;">Artist</p>
+        <p style="font-size:1.4rem;color:var(--text);font-family:'Fraunces',serif;margin-bottom:0.25rem;">Commissioned Artist</p>
+        <p style="font-size:0.9rem;color:var(--muted);font-style:italic;margin-bottom:1.5rem;">Lagos, Nigeria</p>
+
+        <p style="font-size:0.8rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:0.5rem;">Statement</p>
+        <p style="color:var(--text);line-height:1.75;margin-bottom:1.5rem;font-style:italic;">
+          Content forthcoming. Artist statement and portfolio will appear here.
+        </p>
+
+        <p style="font-size:0.8rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:0.5rem;">Royalty Record</p>
+        <p style="color:var(--muted);font-size:0.92rem;line-height:1.75;">
+          A real-time record of how this artist is paid every time their work is seen will be displayed here.
+        </p>
+      </div>
+
+      <p style="font-size:0.85rem;color:var(--muted);font-style:italic;margin-bottom:2rem;">
+        Example attribution page — content forthcoming.
+      </p>
+
+      <a href="/" class="btn-secondary" style="margin-top:0;">
+        ← Back to AfriGlyph
+      </a>
+    </div>
+  </main>
+  <Footer />
+</BaseLayout>

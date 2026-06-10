@@ -1,0 +1,33 @@
+# AfriGlyph
+
+> Cultural infrastructure for the African internet — a B2B API delivering premium, culturally authentic Glyphs for African fintech apps.
+
+## Company
+
+- Name: AfriGlyph Inc.
+- Location: Delaware, USA
+- Website: https://afriglyph.com
+- Contact: pilot@afriglyph.com
+- Demo: https://cal.com/afriglyph/demo
+
+## Product
+
+AfriGlyph is an API/SDK that replaces generic payment success screens with culturally specific celebration moments commissioned from African digital artists. Partners integrate with one API call; AfriGlyph returns regionally appropriate Glyphs in GIF, PNG, and Lottie formats.
+
+## Target Audience
+
+B2B fintech and product teams building apps for African users who want to improve retention, dwell time, and cultural authenticity on payment success screens.
+
+## Key Differentiators
+
+- Commissioned African digital art, not stock or generic emoji
+- "Verified by AfriGlyph" artist attribution on every Glyph
+- Artist royalty payments on each view
+- Fintech-compliant: no PII, only region and transaction context
+- 30-day pilot program ($1,000) with integration support
+
+## Pages
+
+- Home: https://afriglyph.com/
+- Creator Attribution Example: https://afriglyph.com/creator-attribution
+- Privacy: https://afriglyph.com/privacy

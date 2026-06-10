@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://afriglyph.com/sitemap-index.xml

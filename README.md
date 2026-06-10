@@ -1,113 +1,48 @@
 # AfriGlyph Website
 
-Production marketing site for [AfriGlyph](https://afriglyph.com) — cultural infrastructure for African fintech. Built with Astro 6 (static output).
+This is the marketing site for [AfriGlyph](https://afriglyph.com) — the landing page, supporting pages, and everything needed to present the product to partners and investors.
 
-## Development
+The site is built as a fast, static website. When changes are pushed to the `main` branch, they deploy automatically.
+
+## Live site
+
+- **Production:** [afriglyph.com](https://afriglyph.com) *(once DNS is connected)*
+- **Preview:** [sirstig.github.io/afriglyph](https://sirstig.github.io/afriglyph/)
+
+## What's on the site
+
+**Home** — The main landing page. Covers the problem (users leaving at the success screen), the product (one API call, culturally specific Glyphs), how it works in-app, the artist library, verified attribution, and the 30-day pilot offer.
+
+**Creator attribution** — An example of what users see when they tap "Verified by AfriGlyph" inside a partner app. Shows how artist credit works in practice.
+
+**Privacy** — Privacy policy placeholder. Ready to be filled in with final legal copy.
+
+## Making changes
+
+Content and design live in this repository. To update the site:
+
+1. Edit the relevant files
+2. Push to `main`
+3. GitHub Actions builds and publishes the update (usually within a minute or two)
+
+If you need a developer to make changes locally, the basics are:
 
 ```bash
 npm install
 npm run dev
 ```
 
-Open [http://localhost:4321](http://localhost:4321).
+That starts a local preview at [http://localhost:4321](http://localhost:4321).
 
-## Build
+## Custom domain
 
-```bash
-SITE_URL=https://afriglyph.com npm run build
-```
+The site is configured for **afriglyph.com**. Once DNS is pointed at GitHub Pages and the domain is added in the repo's Pages settings, the preview URL above can be replaced by the live domain.
 
-Output is written to `dist/`. Set `SITE_URL` to your production domain before building so canonical URLs and the sitemap are correct.
+## Reference materials
 
-```bash
-npm run preview
-```
+The `Resources/` folder contains the original client prototype and reference files. Those files are not published — they're here for design and copy reference only.
 
-## Deploy
+## Questions
 
-The build is a static site — upload `dist/` to any static host.
-
-### GitHub Pages (recommended)
-
-This repo includes a GitHub Actions workflow (`.github/workflows/deploy.yml`) that builds and deploys on every push to `main`.
-
-**One-time setup:**
-
-1. Push this repo to GitHub.
-2. In the repo, go to **Settings → Pages**.
-3. Under **Build and deployment**, set **Source** to **GitHub Actions**.
-4. Push to `main` (or run the workflow manually from the **Actions** tab).
-
-The site deploys to GitHub Pages. `public/CNAME` is set to `afriglyph.com` for a custom domain.
-
-**Custom domain (`afriglyph.com`):**
-
-1. In **Settings → Pages → Custom domain**, enter `afriglyph.com` and save.
-2. At your DNS provider, add the records GitHub shows (usually an `A` record to GitHub IPs, or a `CNAME` to `<user>.github.io`).
-3. Enable **Enforce HTTPS** once DNS has propagated.
-
-**Repository variables** (optional, **Settings → Secrets and variables → Actions → Variables**):
-
-| Variable | Default | Purpose |
-|----------|---------|---------|
-| `SITE_URL` | `https://afriglyph.com` | Canonical URLs and sitemap |
-| `BASE_PATH` | _(empty)_ | Only if serving from `username.github.io/repo-name` without a custom domain — set to `afriglyph` |
-
-With a custom domain at the repo root, leave `BASE_PATH` unset.
-
-### Vercel
-
-```bash
-npm i -g vercel
-vercel
-```
-
-Set environment variable `SITE_URL` to your production URL in the Vercel dashboard.
-
-### Netlify
-
-```bash
-npm i -g netlify-cli
-netlify deploy --prod --dir=dist
-```
-
-Build command: `npm run build`  
-Publish directory: `dist`  
-Environment: `SITE_URL=https://yourdomain.com`
-
-### Cloudflare Pages
-
-Build command: `npm run build`  
-Build output directory: `dist`  
-Environment variable: `SITE_URL=https://yourdomain.com`
-
-### Generic static hosting
-
-1. Run `SITE_URL=https://yourdomain.com npm run build`
-2. Upload the contents of `dist/` to your host (S3, GitHub Pages, etc.)
-3. Point DNS at the host and enable HTTPS
-
-## Project structure
-
-```
-src/
-  components/     Nav, Footer, landing sections
-  layouts/        BaseLayout (SEO, fonts, meta)
-  pages/          /, /creator-attribution, /privacy
-  styles/         Design tokens + global CSS
-  scripts/        Scroll animations, mobile nav, glyph carousel
-public/
-  images/         Logo and glyph assets (extracted from client prototype)
-  robots.txt
-  llms.txt        AI crawler summary
-```
-
-Client reference materials remain in `Resources/` and are not deployed.
-
-## Pages
-
-| Route | Description |
-|-------|-------------|
-| `/` | Main landing page |
-| `/creator-attribution` | Example artist attribution shell |
-| `/privacy` | Privacy policy placeholder |
+For product or pilot inquiries: [pilot@afriglyph.com](mailto:pilot@afriglyph.com)  
+To book a demo: [cal.com/afriglyph/demo](https://cal.com/afriglyph/demo)

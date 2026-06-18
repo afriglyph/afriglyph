@@ -6,7 +6,7 @@ Pushing to `main` triggers a GitHub Actions workflow that builds and deploys the
 
 ## Pages
 
-**Home** — Main landing page with product overview, how it works, in-app preview, glyph library, verified attribution, and pilot section.
+**Home** — API-first B2B landing page: hero with code snippet, how it works, in-app preview, opportunity stats, and pilot CTA.
 
 **Creator attribution** — Example artist attribution page.
 

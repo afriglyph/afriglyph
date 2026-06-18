@@ -1,31 +1,43 @@
 <section class="how" id="how">
   <div class="container">
-    <div class="eyebrow fade-up">The Fix</div>
-    <h2 class="fade-up delay-1">One API call.<br><em>A moment they will remember.</em></h2>
-    <p class="section-lead fade-up delay-2">AfriGlyph replaces dead air with culturally specific, high-fidelity celebration moments. You send the transaction context and region. We return the right Glyph for that user, in under 200ms (p95).</p>
-
-    <p class="how-security fade-up delay-2">
-      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="#C9922A" stroke-width="2" stroke-linejoin="round"/></svg>
-      <strong>Security note:</strong> <span>AfriGlyph does not store or process personal data. We receive only region and transaction context — no user identifiers, no financial data, no PII. Built for fintech compliance from day one.</span>
-    </p>
-
-    <p class="how-tagline fade-up delay-2">Display the cultural expression the moment is calling for.</p>
+    <h2 class="fade-up">One API call after the transaction.</h2>
 
     <div class="steps">
       <div class="step fade-up delay-1">
-        <div class="step-title">Your app calls the AfriGlyph API</div>
-        <p>Send the transaction context, the user's region, and the mood. One POST request. That is all.</p>
+        <div class="step-icon" aria-hidden="true">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 2L11 13"/><path d="M22 2L15 22 11 13 2 9l20-7z"/>
+          </svg>
+        </div>
+        <div class="step-title">Your app sends context</div>
+        <p>Region and transaction type. One POST. Zero PII.</p>
       </div>
       <div class="step fade-up delay-2">
-        <div class="step-title">We return five premium Glyphs</div>
-        <p>Culturally specific to the region, appropriate to the moment. Delivered in GIF, PNG, and Lottie formats in under 200ms (p95).</p>
+        <div class="step-icon" aria-hidden="true">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+          </svg>
+        </div>
+        <div class="step-title">We return five Glyphs</div>
+        <p>Curated for the moment, region, and culture. Under 200ms (p95).</p>
       </div>
       <div class="step fade-up delay-3">
-        <div class="step-title">The moment lands</div>
-        <p>The Glyph plays in your success screen. The user stays. The brand impression is made. The moment is shareable.</p>
+        <div class="step-icon" aria-hidden="true">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/>
+          </svg>
+        </div>
+        <div class="step-title">The reaction lands</div>
+        <p>Plays instantly on your success screen. Shareable to WhatsApp without leaving your app.</p>
       </div>
     </div>
 
-    <div class="how-tag fade-up delay-4">No UX overhaul. No new infrastructure. Integration in an afternoon.</div>
+    <div class="how-footer fade-up delay-4">
+      <p class="how-security">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="#C9922A" stroke-width="2" stroke-linejoin="round"/></svg>
+        <strong>No PII.</strong> Region and transaction context only. Built for fintech compliance.
+      </p>
+      <div class="how-tag">One afternoon to integrate. No UX overhaul.</div>
+    </div>
   </div>
 </section>

@@ -3,15 +3,15 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import Nav from '../components/Nav.astro';
 import Footer from '../components/Footer.astro';
 import Hero from '../components/sections/Hero.astro';
-import Problem from '../components/sections/Problem.astro';
 import How from '../components/sections/How.astro';
 import InApp from '../components/sections/InApp.astro';
-import Library from '../components/sections/Library.astro';
-import Verified from '../components/sections/Verified.astro';
+import Problem from '../components/sections/Problem.astro';
 import Pilot from '../components/sections/Pilot.astro';
 import { withBase } from '../utils/base';
 
 const siteUrl = Astro.site?.toString().replace(/\/$/, '') || 'https://afriglyph.com';
+
+const description = 'API for culturally specific payment success reactions in African fintech apps.';
 
 const jsonLd = [
   {
@@ -20,7 +20,7 @@ const jsonLd = [
     name: 'AfriGlyph Inc.',
     url: siteUrl,
     logo: new URL(withBase('/images/logo.jpg'), `${siteUrl}/`).toString(),
-    description: 'Cultural infrastructure for the African internet — premium Glyphs for African fintech apps.',
+    description,
     address: {
       '@type': 'PostalAddress',
       addressRegion: 'Delaware',
@@ -38,7 +38,7 @@ const jsonLd = [
     name: 'AfriGlyph API',
     applicationCategory: 'BusinessApplication',
     operatingSystem: 'Any',
-    description: 'API for culturally specific celebration moments in African fintech payment success screens.',
+    description,
     offers: {
       '@type': 'Offer',
       price: '1000',
@@ -53,20 +53,16 @@ const jsonLd = [
 ];
 ---
 
-<BaseLayout jsonLd={jsonLd}>
+<BaseLayout description={description} jsonLd={jsonLd}>
   <Nav />
   <main id="main">
     <Hero />
-    <div class="divider"></div>
-    <Problem />
     <div class="divider"></div>
     <How />
     <div class="divider"></div>
     <InApp />
     <div class="divider"></div>
-    <Library />
-    <div class="divider"></div>
-    <Verified />
+    <Problem />
     <div class="divider"></div>
     <Pilot />
   </main>

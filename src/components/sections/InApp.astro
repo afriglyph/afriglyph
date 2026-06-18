@@ -1,69 +1,76 @@
----
-import { withBase } from '../../utils/base';
----
-
 <section class="in-app" id="inapp">
   <div class="container">
-    <div class="eyebrow fade-up">In the App</div>
-    <h2 class="fade-up delay-1">Feels native.<br><em>Because it is.</em></h2>
-    <p class="section-lead fade-up delay-2">AfriGlyph occupies one defined zone in your existing success screen. Nothing else changes. The Glyph plays automatically — no user action required to experience the cultural moment.</p>
+    <div class="inapp-grid">
 
-    <div class="phone-wrap fade-up delay-2">
-      <div class="phone">
-        <div class="phone-notch" aria-hidden="true"></div>
-        <div class="phone-screen">
-          <div class="phone-tick" aria-hidden="true">✓</div>
-          <div class="phone-title">Transfer successful</div>
-          <div class="phone-amount">₦ 50,000</div>
-          <div class="phone-sub">To Mum · First Bank</div>
-          <div class="glyph-zone">
-            <img
-              src={withBase('/images/glyphs/glyph-hero.jpg')}
-              alt="Cultural celebration Glyph"
-              class="glyph-img"
-              width="120"
-              height="120"
-              loading="lazy"
-            />
+      <div class="inapp-phone fade-up delay-1">
+        <div class="phone">
+          <div class="phone-notch" aria-hidden="true"></div>
+          <div class="phone-screen">
+            <div class="phone-tick" aria-hidden="true">✓</div>
+            <div class="phone-title">Transfer successful</div>
+            <div class="phone-amount">₦ 50,000</div>
+            <div class="phone-sub">To Mum · First Bank</div>
+            <div class="glyph-zone" aria-hidden="true">🎊</div>
+            <div class="tray-peek" aria-hidden="true">
+              <div class="tray-thumb tray-thumb--a"></div>
+              <div class="tray-thumb tray-thumb--b"></div>
+              <div class="tray-thumb tray-thumb--c"></div>
+              <div class="tray-more">more ›</div>
+            </div>
           </div>
-          <div class="tray-peek" aria-hidden="true">
-            <div class="tray-thumb">
-              <img src={withBase('/images/glyphs/glyph-tray-1.jpg')} alt="" class="glyph-img" width="28" height="28" loading="lazy" />
+          <div class="phone-tooltip" aria-hidden="true">Tap to explore more reactions ↑</div>
+        </div>
+      </div>
+
+      <div class="inapp-content">
+        <div class="eyebrow fade-up">In your app</div>
+        <h2 class="fade-up delay-1">Lives in your success screen.</h2>
+        <p class="section-lead fade-up delay-2">One defined zone in your existing UI. Auto-plays on success. Users can tap through five Glyphs or share to WhatsApp in one tap.</p>
+
+        <div class="app-features fade-up delay-3">
+          <div class="app-feature">
+            <div class="app-feature-icon" aria-hidden="true">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="5 3 19 12 5 21 5 3"/>
+              </svg>
             </div>
-            <div class="tray-thumb">
-              <img src={withBase('/images/glyphs/glyph-tray-2.jpg')} alt="" class="glyph-img" width="28" height="28" loading="lazy" />
+            <div class="app-feature-title">Auto-play</div>
+            <p>Plays on success. No tap required.</p>
+          </div>
+          <div class="app-feature">
+            <div class="app-feature-icon" aria-hidden="true">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/>
+                <rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/>
+              </svg>
             </div>
-            <div class="tray-thumb">
-              <img src={withBase('/images/glyphs/glyph-tray-3.jpg')} alt="" class="glyph-img" width="28" height="28" loading="lazy" />
+            <div class="app-feature-title">Five curated Glyphs</div>
+            <p>Contextually selected. Varied across sessions.</p>
+          </div>
+          <div class="app-feature">
+            <div class="app-feature-icon" aria-hidden="true">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                <circle cx="12" cy="12" r="3"/>
+              </svg>
             </div>
-            <div class="tray-more">more ›</div>
+            <div class="app-feature-title">Discoverable</div>
+            <p>Tray peek on first session. No tutorial needed.</p>
+          </div>
+          <div class="app-feature">
+            <div class="app-feature-icon" aria-hidden="true">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/>
+                <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/>
+                <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/>
+              </svg>
+            </div>
+            <div class="app-feature-title">WhatsApp share</div>
+            <p>Send as a sticker without leaving your app.</p>
           </div>
         </div>
-        <div class="phone-tooltip" aria-hidden="true">Tap to explore more reactions ↑</div>
       </div>
-    </div>
 
-    <div class="app-features fade-up delay-3">
-      <div class="app-feature">
-        <div class="app-feature-icon" aria-hidden="true">▶</div>
-        <div class="app-feature-title">Auto-play</div>
-        <p>The Glyph plays automatically. No tap required for the cultural moment to land.</p>
-      </div>
-      <div class="app-feature">
-        <div class="app-feature-icon" aria-hidden="true">◉</div>
-        <div class="app-feature-title">Five curated Glyphs</div>
-        <p>Per session, contextually selected. Varied across sessions from a library of 25.</p>
-      </div>
-      <div class="app-feature">
-        <div class="app-feature-icon" aria-hidden="true">↑</div>
-        <div class="app-feature-title">Discoverable</div>
-        <p>First-session tooltip. Persistent tray peek. No tutorial required after session one.</p>
-      </div>
-      <div class="app-feature">
-        <div class="app-feature-icon" aria-hidden="true">↗</div>
-        <div class="app-feature-title">Shareable to WhatsApp</div>
-        <p>From the first pilot, every Glyph ships as an animated WhatsApp sticker. Users send them into the conversations that matter — carrying your brand into the channel where African talk actually happens.</p>
-      </div>
     </div>
   </div>
 </section>

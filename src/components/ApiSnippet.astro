@@ -1,0 +1,24 @@
+<div class="terminal" aria-label="AfriGlyph API request and response example">
+  <div class="terminal-header" aria-hidden="true">
+    <div class="terminal-dots">
+      <span></span><span></span><span></span>
+    </div>
+    <div class="terminal-title">AfriGlyph API · v1</div>
+    <div class="terminal-badge">REST</div>
+  </div>
+  <pre class="terminal-body"><code><span class="tc-comment">// POST once after each transaction</span>
+<span class="tc-method">POST</span> <span class="tc-path">/v1/reactions</span>
+<span class="tc-brace">{'{'}</span>
+  <span class="tc-key">"region"</span><span class="tc-punct">:</span> <span class="tc-str">"NG"</span><span class="tc-punct">,</span>
+  <span class="tc-key">"transaction_type"</span><span class="tc-punct">:</span> <span class="tc-str">"transfer_sent"</span>
+<span class="tc-brace">{'}'}</span>
+
+<span class="tc-comment">// Response · 124ms</span>
+<span class="tc-status">200 OK</span>
+<span class="tc-brace">{'{'}</span>
+  <span class="tc-key">"glyphs"</span><span class="tc-punct">:</span> [<span class="tc-comment">/* 5 items */</span>],
+  <span class="tc-key">"formats"</span><span class="tc-punct">:</span> [<span class="tc-str">"gif"</span><span class="tc-punct">,</span> <span class="tc-str">"png"</span><span class="tc-punct">,</span> <span class="tc-str">"lottie"</span>],
+  <span class="tc-key">"region"</span><span class="tc-punct">:</span> <span class="tc-str">"NG"</span><span class="tc-punct">,</span>
+  <span class="tc-key">"latency_ms"</span><span class="tc-punct">:</span> <span class="tc-num">124</span>
+<span class="tc-brace">{'}'}</span></code></pre>
+</div>

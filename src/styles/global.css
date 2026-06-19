@@ -517,7 +517,7 @@ section:not(.hero) { padding: 4.5rem 0; }
 }
 
 .hero h1 {
-  max-width: 18ch;
+  max-width: 28ch;
   margin-bottom: 1.25rem;
   color: var(--text);
   font-size: clamp(2rem, 5vw, 3.2rem);

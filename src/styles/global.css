@@ -664,10 +664,13 @@ section:not(.hero) { padding: 4.5rem 0; }
 .how-footer {
   margin-top: 3rem;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 1.5rem;
   flex-wrap: wrap;
 }
+/* Keep the green tag top-aligned with the No PII box (drop its bottom margin
+   so the two boxes line up at the top). */
+.how-footer .how-security { margin-bottom: 0; }
 
 .how-tag {
   display: inline-block;
@@ -1378,7 +1381,9 @@ footer {
 @media (max-width: 900px) {
   .hero-grid { grid-template-columns: 1fr; gap: 2.5rem; }
   .hero h1 { max-width: none; }
-  .hero-panel { order: -1; }
+  /* On mobile, stack copy first, then the code/phone panel (panel is first
+     visually on desktop only via the side-by-side grid). */
+  .hero-panel { order: 0; }
   .steps { grid-template-columns: 1fr; }
   .inapp-grid { grid-template-columns: 1fr; gap: 3rem; }
   .how-footer { gap: 1rem; }

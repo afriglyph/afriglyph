@@ -7,7 +7,7 @@
 - Name: AfriGlyph Inc.
 - Location: Delaware, USA
 - Website: https://afriglyph.com
-- Contact: pilot@afriglyph.com
+- Contact: founder@afriglyph.com
 - Demo: https://cal.com/afriglyph/demo
 
 ## Product

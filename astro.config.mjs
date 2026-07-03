@@ -11,7 +11,7 @@ const base =
 
 export default defineConfig({
   site,
-  base,
+  
   integrations: [sitemap()],
   compressHTML: true,
 });
